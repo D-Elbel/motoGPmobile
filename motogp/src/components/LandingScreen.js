@@ -19,7 +19,7 @@ function LandingScreen() {
             window.location.replace("http://localhost:3000/riderlist");
           }}
         >
-          View Riders
+          View Riders By Country
           <BsFillPersonFill size={26} />
         </button>
         <button className="flex justify-between w-11/12 p-2 m-2 text-xl bg-white border-2 rounded-md">
