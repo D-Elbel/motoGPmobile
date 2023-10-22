@@ -6,8 +6,13 @@ import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import LandingScreen from "./components/LandingScreen";
 import RiderList from "./components/RiderList";
+import AddCountry from "./components/AddCountry";
 
-const router = createBrowserRouter([{ path: "/", element: <LandingScreen /> },{path: "/riderList", element: <RiderList />}]);
+const router = createBrowserRouter([
+  { path: "/", element: <LandingScreen /> },
+  { path: "/riderList", element: <RiderList /> },
+  { path: "/addCountry", element: <AddCountry /> },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
