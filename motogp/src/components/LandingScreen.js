@@ -3,7 +3,7 @@ import { AiFillFileAdd } from "react-icons/ai";
 import { FaFlag } from "react-icons/fa";
 import { FaMotorcycle } from "react-icons/fa";
 import motogologo from "../images/motogplogo.webp";
-import ManualSync from "./ManualSync";
+
 function LandingScreen() {
   return (
     <>
@@ -12,7 +12,15 @@ function LandingScreen() {
           <img src={motogologo} alt="motogologo" className="w-1/3" />
           <h2 className="text-2xl font-bold">Result Tracker</h2>
         </div>
-
+        <button
+          onClick={() => {
+            window.location.replace("http://localhost:3000/addcountry");
+          }}
+          className="flex justify-between w-11/12 p-2 m-2 text-xl bg-white border-2 rounded-md"
+        >
+          Add Country
+          <AiFillFileAdd size={26} />
+        </button>
         <button
           className="flex justify-between w-11/12 p-2 m-2 text-xl bg-white border-2 rounded-md"
           onClick={() => {
@@ -22,21 +30,25 @@ function LandingScreen() {
           View Riders By Country
           <BsFillPersonFill size={26} />
         </button>
-        <button className="flex justify-between w-11/12 p-2 m-2 text-xl bg-white border-2 rounded-md">
-          Update Results
-          <AiFillFileAdd size={26} />
-        </button>
-        <button className="flex justify-between w-11/12 p-2 m-2 text-xl bg-white border-2 rounded-md">
+
+        <button
+          onClick={() => {
+            window.location.replace("http://localhost:3000/addrider");
+          }}
+          className="flex justify-between w-11/12 p-2 m-2 text-xl bg-white border-2 rounded-md"
+        >
           Add Rider
           <FaMotorcycle size={26} />
         </button>
-        <button className="flex justify-between w-11/12 p-2 m-2 text-xl bg-white border-2 rounded-md">
+        <button
+          onClick={() => {
+            window.location.replace("http://localhost:3000/deletecountry");
+          }}
+          className="flex justify-between w-11/12 p-2 m-2 text-xl bg-white border-2 rounded-md"
+        >
           Remove Country
           <FaFlag size={26} />
         </button>
-        <div className="overflow-scroll bg-white">
-          <ManualSync></ManualSync>
-        </div>
       </div>
     </>
   );

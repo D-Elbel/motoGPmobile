@@ -7,11 +7,15 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import LandingScreen from "./components/LandingScreen";
 import RiderList from "./components/RiderList";
 import AddCountry from "./components/AddCountry";
+import DeleteCountry from "./components/DeleteCountry";
+import AddRider from "./components/AddRider";
 
 const router = createBrowserRouter([
   { path: "/", element: <LandingScreen /> },
   { path: "/riderList", element: <RiderList /> },
-  { path: "/addCountry", element: <AddCountry /> },
+  { path: "/addcountry", element: <AddCountry /> },
+  { path: "/deletecountry", element: <DeleteCountry /> },
+  { path: "/addrider", element: <AddRider /> },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

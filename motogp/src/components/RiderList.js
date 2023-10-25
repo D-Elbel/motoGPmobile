@@ -1,25 +1,8 @@
 import motogologo from "../images/motogplogo.webp";
 import { useEffect, useState } from "react";
-
 import db from "../pouchdb";
 
-const riderMock = {
-  Country: "VE",
-  Riders: [
-    {
-      name: "Carlos Lavado",
-      Victories: "19",
-      NumberofSecond: "16",
-      NumberofThird: "14",
-      Numberof4th: "13",
-      Numberof5th: "13",
-      Numberof6th: "12",
-    },
-  ],
-};
-
 function RiderList() {
-  let [riders, setRiders] = useState(riderMock.Riders);
   let [riderListEl, setRiderListEl] = useState(null);
   let [searchCountry, setSearchCountry] = useState(null);
 
@@ -83,8 +66,10 @@ function RiderList() {
       <div className="flex flex-col items-center min-h-screen bg-red-600 min-w-screen">
         <div className="w-11/12 p-2 m-4 bg-white border-2 rounded-sm border-grey">
           <div className="flex items-center justify-between p-2 bg-white">
-            <img src={motogologo} alt="motogologo" className="w-1/3" />
-            <h2 className="text-2xl font-bold">Result Tracker</h2>
+            <a href="/">
+              <img src={motogologo} alt="MotoGP Logo" className="w-1/3" />
+            </a>
+            <h2 className="text-2xl font-bold">Find Riders</h2>
           </div>
         </div>
         <div className="w-11/12 m-4 bg-white border-2 rounded-sm border-grey">
